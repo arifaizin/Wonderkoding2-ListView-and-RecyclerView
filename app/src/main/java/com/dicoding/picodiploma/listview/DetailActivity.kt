@@ -9,7 +9,11 @@ import kotlinx.android.synthetic.main.content_detail.*
 class DetailActivity : AppCompatActivity() {
 
     companion object{
+//        const val KEY_NAME = "key_name"
+//        const val KEY_DESCRIPTION = "key_description"
+//        const val KEY_PHOTO = "key_photo"
         const val KEY_HERO = "key_hero"
+
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,6 +24,10 @@ class DetailActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
+
+//        val dataName = intent.getStringExtra(KEY_NAME)
+//        val dataDescription = intent.getStringExtra(KEY_DESCRIPTION)
+//        val dataPhoto = intent.getIntExtra(KEY_PHOTO, 0)
 
         val dataHero = intent.getParcelableExtra(KEY_HERO) as Hero
         supportActionBar?.title = dataHero.name

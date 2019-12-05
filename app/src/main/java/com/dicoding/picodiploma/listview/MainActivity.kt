@@ -32,10 +32,13 @@ class MainActivity : AppCompatActivity() {
         lv_list.adapter = adapter
 
         lv_list.setOnItemClickListener { adapterView, view, position, l ->
-            val intentWithParcelable = Intent(this@MainActivity, DetailActivity::class.java)
-            val selectedHero: Hero = heroes[position]
-            intentWithParcelable.putExtra(DetailActivity.KEY_HERO, selectedHero)
-            startActivity(intentWithParcelable)
+            val intentDetail = Intent(this@MainActivity, DetailActivity::class.java)
+//            intentDetail.putExtra(DetailActivity.KEY_NAME, heroes[position].name)
+//            intentDetail.putExtra(DetailActivity.KEY_DESCRIPTION, heroes[position].description)
+//            intentDetail.putExtra(DetailActivity.KEY_PHOTO, heroes[position].photo)
+            val selectedHero = heroes[position]
+            intentDetail.putExtra(DetailActivity.KEY_HERO, selectedHero)
+            startActivity(intentDetail)
         }
     }
 }
