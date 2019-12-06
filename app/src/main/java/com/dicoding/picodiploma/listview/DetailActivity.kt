@@ -13,7 +13,6 @@ class DetailActivity : AppCompatActivity() {
 //        const val KEY_DESCRIPTION = "key_description"
 //        const val KEY_PHOTO = "key_photo"
         const val KEY_HERO = "key_hero"
-
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

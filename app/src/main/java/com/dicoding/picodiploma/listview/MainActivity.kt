@@ -32,12 +32,9 @@ class MainActivity : AppCompatActivity() {
         lv_list.adapter = adapter
 
         lv_list.setOnItemClickListener { adapterView, view, position, l ->
-            val intentDetail = Intent(this@MainActivity, DetailActivity::class.java)
-//            intentDetail.putExtra(DetailActivity.KEY_NAME, heroes[position].name)
-//            intentDetail.putExtra(DetailActivity.KEY_DESCRIPTION, heroes[position].description)
-//            intentDetail.putExtra(DetailActivity.KEY_PHOTO, heroes[position].photo)
+            val intentDetail = Intent(this@MainActivity, ConstraintDetailActivity::class.java)
             val selectedHero = heroes[position]
-            intentDetail.putExtra(DetailActivity.KEY_HERO, selectedHero)
+            intentDetail.putExtra(ConstraintDetailActivity.KEY_HERO, selectedHero)
             startActivity(intentDetail)
         }
     }
