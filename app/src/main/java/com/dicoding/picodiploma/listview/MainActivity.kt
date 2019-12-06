@@ -1,8 +1,8 @@
 package com.dicoding.picodiploma.listview
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -29,13 +29,8 @@ class MainActivity : AppCompatActivity() {
         val adapter = HeroAdapter(this)
         adapter.heroes = heroes
 
-        lv_list.adapter = adapter
-
-        lv_list.setOnItemClickListener { adapterView, view, position, l ->
-            val intentDetail = Intent(this@MainActivity, ConstraintDetailActivity::class.java)
-            val selectedHero = heroes[position]
-            intentDetail.putExtra(ConstraintDetailActivity.KEY_HERO, selectedHero)
-            startActivity(intentDetail)
-        }
+        rv_list.adapter = adapter
+        rv_list.layoutManager = LinearLayoutManager(this)
+//        rv_list.layoutManager = GridLayoutManager(this, 2)
     }
 }
