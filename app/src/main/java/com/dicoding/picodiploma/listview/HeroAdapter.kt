@@ -12,6 +12,7 @@ import kotlinx.android.synthetic.main.item_hero.view.*
 class HeroAdapter internal constructor(private val context: Context) : BaseAdapter() {
     internal var heroes = arrayListOf<Hero>()
 
+    //untuk jumlah item yang ditampilkan
     override fun getCount(): Int = heroes.size
 
     override fun getItem(i: Int): Any = heroes[i]
@@ -21,19 +22,20 @@ class HeroAdapter internal constructor(private val context: Context) : BaseAdapt
     override fun getView(position: Int, view: View?, viewGroup: ViewGroup): View {
         var itemView = view
         if (itemView == null) {
-            //Menghubungkan ViewHolder dengan View
+            //untuk menghubungkan dengan layout item
             itemView = LayoutInflater.from(context).inflate(R.layout.item_hero, viewGroup, false)
         }
 
         val viewHolder = ViewHolder(itemView as View)
 
-        //Mengubah nilai pahlawan sesuai dari posisinya
+        //memberi data ke ViewHolder sesuai posisinya
         val hero = getItem(position) as Hero
         viewHolder.bind(hero)
         return itemView
     }
 
     private inner class ViewHolder internal constructor(val view: View) {
+        //mencocokkan data dengan komponen
         fun bind(hero: Hero) {
             with(view){
                 txt_name.text = hero.name
