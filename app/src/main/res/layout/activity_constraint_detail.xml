@@ -31,12 +31,11 @@
 
         <TextView
             android:id="@+id/tvNameDetail"
+            style="@style/TitleText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Sudirman"
-            android:textSize="36sp"
-            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/imgPhotoDetail"
             app:layout_constraintHorizontal_bias="0.488"
             app:layout_constraintStart_toStartOf="@+id/imgPhotoDetail"

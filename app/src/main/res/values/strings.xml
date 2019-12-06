@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyListView</string>
+    <string name="app_name">Pahlawanku</string>
     <string name="name_heroes">Nama Pahlawan</string>
     <string name="lorem">lorem ipsum dolor sit amet</string>
 
@@ -8,7 +8,7 @@
         <item>Ahmad Yani</item>
         <item>Sutomo</item>
         <item>Gatot Soebroto</item>
-        <item>Ki Hadjar Dewantarai</item>
+        <item>Ki Hadjar Dewantara</item>
         <item>Mohammad Hatta</item>
         <item>Soedirman</item>
         <item>Soekarno</item>
