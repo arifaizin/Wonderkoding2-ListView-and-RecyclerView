@@ -1,7 +1,11 @@
 package com.dicoding.picodiploma.listview
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -32,5 +36,19 @@ class MainActivity : AppCompatActivity() {
         rv_list.adapter = adapter
         rv_list.layoutManager = LinearLayoutManager(this)
 //        rv_list.layoutManager = GridLayoutManager(this, 2)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.action_profile -> {
+                startActivity(Intent(this, ProfileActivity::class.java))
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
